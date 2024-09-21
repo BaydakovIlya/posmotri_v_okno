@@ -42,7 +42,6 @@ ol {
 
 .content {
   width: 1140px;
-  height: 534px;
   align-items: end;
   display: flex;
   gap: 30px;
@@ -53,7 +52,6 @@ ol {
   margin-top: 78px;
   flex-direction: column;
   max-width: 711px;
-  min-height: 456px;
   align-items: end;
 }
 
@@ -74,7 +72,6 @@ ol {
   display: flex;
   gap: 40px;
   width: 711px;
-  height: 54px;
   align-items: end;
 }
 
@@ -88,7 +85,7 @@ ol {
 /* Город,время суток */
 .search-form__fieldset-title {
   font-weight: 400;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   line-height: 22px;
   color: #ffffff;
@@ -104,10 +101,6 @@ ol {
 
 .search-form__label:hover:has(.search-form__checkbox) {
   text-decoration: underline;
-}
-
-.search-form__label:has(:focus) {
-  outline: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -142,6 +135,7 @@ ol {
   border-block-end: 1px solid currentColor;
   border-block-start: 1px solid currentColor;
   outline: none;
+  appearance: none;
 }
 
 .search-form__checkbox-list {
@@ -175,6 +169,14 @@ ol {
   border: 1px solid #fff;
 }
 
+.button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline-offset: 2px;
+}
+
 .button {
   display: flex;
   width: 100%;
@@ -185,22 +187,23 @@ ol {
   color: #fff;
   cursor: pointer;
   padding: 6px 0px 6px;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  font-style: normal;
 }
 
-.button:focus-visible {
-  outline-offset: 2px;
-}
 /* ПОКАЗАТЬ ЕЩЕ */
 .more-button {
   width: 98%;
-  height: 34px;
+  min-height: 34px;
   top: 20px;
-  background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  font-weight: 700;
-  font-size: 18px;
   margin: 3px;
+}
+/* Кнопка Найти */
+.search-form__submit-button {
+  line-height: 21.6px;
+  margin: 1px;
 }
 
 .more-button:hover {
@@ -209,16 +212,6 @@ ol {
 
 .more-button:active {
   background-color: #545050;
-}
-/* Кнопка Найти */
-.search-form__submit-button {
-  font-family: Fira Sans Condensed;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21.6px;
-  cursor: pointer;
-  margin: 1px;
 }
 
 .search-form__submit-button:active {
@@ -237,7 +230,6 @@ ol {
 /* Заголовок правой секции */
 .title {
   width: 260px;
-  height: 210px;
   font-family: "Oswald";
   font-weight: 700;
   font-size: 75px;
@@ -256,11 +248,6 @@ ol {
   align-items: end;
 }
 
-.content__video-card-description-container:hover {
-  text-decoration: underline;
-  color: #fff;
-}
-
 .content__list-item {
   margin: 3px;
 }
@@ -268,8 +255,31 @@ ol {
   margin-bottom: 30px;
 }
 
+.content__card-link_current {
+  background-color: #545050;
+}
+
 .content__card-link {
   text-decoration: none;
+  display: block;
+  margin-left: 2px;
+}
+
+.content__card-link:focus-visible {
+  outline-offset: 3px;
+}
+
+.content__card-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 .content__video-card {
@@ -277,14 +287,11 @@ ol {
   width: 393px;
 }
 
-.content__video-card:active {
-  background-color: #545050;
-}
-
 .content__video-card-description-container {
   flex: 1 auto;
   min-width: 0px;
 }
+
 .content__video-card-title {
   font-family: "Oswald";
   font-weight: 700;
