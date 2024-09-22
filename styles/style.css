@@ -124,7 +124,7 @@ ol {
 /* Cанкт-Петербург */
 .search-form__textfield {
   width: 225px;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed,sans-serif;
   background-color: transparent;
   font-style: normal;
   color: white;
@@ -136,6 +136,10 @@ ol {
   border-block-start: 1px solid currentColor;
   outline: none;
   appearance: none;
+}
+
+.search-form__textfield:focus{
+  outline: none;
 }
 
 .search-form__checkbox-list {
@@ -169,12 +173,21 @@ ol {
   border: 1px solid #fff;
 }
 
-.button:focus:not(:focus-visible) {
+.button:focus {
   outline: none;
 }
 
 .button:focus-visible {
   outline-offset: 2px;
+  outline: 1px solid #fff;
+}
+
+.button:active{
+  background-color: #545050;
+}
+
+.button:hover{
+  text-decoration: underline;
 }
 
 .button {
@@ -192,7 +205,6 @@ ol {
   font-size: 18px;
   font-style: normal;
 }
-
 /* ПОКАЗАТЬ ЕЩЕ */
 .more-button {
   width: 98%;
@@ -204,22 +216,6 @@ ol {
 .search-form__submit-button {
   line-height: 21.6px;
   margin: 1px;
-}
-
-.more-button:hover {
-  text-decoration: underline;
-}
-
-.more-button:active {
-  background-color: #545050;
-}
-
-.search-form__submit-button:active {
-  background-color: #545050;
-}
-
-.search-form__submit-button:hover {
-  text-decoration: underline;
 }
 /* ПРАВАЯ СЕКЦИЯ */
 .content__details {
@@ -265,12 +261,13 @@ ol {
   margin-left: 2px;
 }
 
-.content__card-link:focus-visible {
-  outline-offset: 3px;
+.content__card-link:focus{
+  outline: none;
 }
 
-.content__card-link:focus:not(:focus-visible) {
-  outline: none;
+.content__card-link:focus-visible {
+  outline-offset: 3px;
+  outline: 1px solid #fff;
 }
 
 .content__card-link:hover {
