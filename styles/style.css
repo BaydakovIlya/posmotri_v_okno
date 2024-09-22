@@ -226,7 +226,7 @@ ol {
 /* Заголовок правой секции */
 .title {
   width: 260px;
-  font-family: "Oswald";
+  font-family: "Oswald",sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70px;
@@ -290,7 +290,7 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: "Oswald";
+  font-family: "Oswald",sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
